@@ -1,0 +1,134 @@
+/* Wrapper to center the content */
+.testimonial-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 4rem 0; /* Adds space above and below the section */
+  }
+  
+  .testimonial-container {
+    background-image: url(../../Assets/testi.jpg);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    height: 300px;
+    padding-left: 150px;
+    padding-right: 150px;
+  
+    /* Center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonial-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../../Assets/testi.jpg) no-repeat center;
+    background-size: cover; /* Ensure the image covers the container */
+    z-index: -1;
+    border-radius: 0.5rem;
+  }
+  
+  .testimonial-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1d4ed8;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+  }
+  
+  .testimonial-quote {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+  
+
+  
+  .quote-icon {
+    color: #a0aec0;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  
+  /* .quote-icon.left {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+  }
+  
+  .quote-icon.right {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+  }
+   */
+
+   /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .testimonial-container {
+      max-width: 700px;
+      padding-left: 100px;
+      padding-right: 100px;
+      height: auto; /* Adjust height for smaller screens */
+  }
+
+  .testimonial-title {
+      font-size: 1.75rem;
+  }
+
+  .quote-icon {
+      font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-container {
+      max-width: 600px;
+      padding: 1.5rem;
+      padding-left: 50px;
+      padding-right: 50px;
+      height: auto; /* Adjust height for smaller screens */
+  }
+
+  .testimonial-title {
+      font-size: 1.5rem;
+  }
+
+  .testimonial-quote {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .testimonial-container {
+      max-width: 90%; /* Use most of the viewport width */
+      padding: 1rem;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: auto; /* Adjust height for mobile screens */
+  }
+
+  .testimonial-title {
+      font-size: 1.25rem;
+  }
+
+  .testimonial-quote {
+      font-size: 0.9rem;
+      line-height: 1.4;
+  }
+
+  .quote-icon {
+      font-size: 1rem;
+  }
+}

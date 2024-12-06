@@ -1,0 +1,143 @@
+.footer {
+    background-color: #4242421a;
+    padding-top: 76px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap; /* Allow wrapping for small screens */
+  }
+  
+  .footer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add spacing for stacked layout on small screens */
+  }
+  
+  .footer-section h3 {
+    font-size: 30px;
+    color: #666666;
+    margin-bottom: 25px;
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .footer-section a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer-section .author {
+    font-weight: bold;
+  }
+  
+  .footer-section .date {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .about .social-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .social-icons svg {
+    cursor: pointer;
+    color: #333;
+    font-size: 27px;
+  }
+  
+  .social-icons svg:hover {
+    color: #007bff;
+  }
+  
+  .latest-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Responsive grid */
+    gap: 10px;
+  }
+  
+  .latest-posts img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .latest-posts img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    background-color: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom strong {
+    font-weight: bold;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Stack sections vertically */
+      padding: 0 20px;
+    }
+  
+    .footer-section h3 {
+      font-size: 24px; /* Adjust heading size */
+    }
+  
+    .footer-section p {
+      font-size: 13px; /* Adjust paragraph size */
+    }
+  
+    .latest-posts {
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Adjust grid for smaller screens */
+    }
+  
+    .social-icons svg {
+      font-size: 24px; /* Smaller icons on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-section h3 {
+      font-size: 20px; /* Further reduce heading size */
+    }
+  
+    .footer-section p {
+      font-size: 12px;
+    }
+  
+    .social-icons svg {
+      font-size: 22px;
+    }
+  }
+  

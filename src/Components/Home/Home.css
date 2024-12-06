@@ -1,0 +1,186 @@
+/* Carousel.css */
+
+.carousel {
+    position: relative; /* Ensure carousel is in the document flow */
+    width: 100%;
+    height: 80vh; /* Responsive height */
+    overflow: hidden;
+    margin-bottom: 2rem; /* Space below carousel */
+    z-index: 1; /* Make sure other sections can be placed below */
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    transition: background-image 0.5s ease;
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.carousel-content {
+    position: relative;
+    max-width: 800px;
+    padding: 1rem;
+    text-align: center;
+    z-index: 2;
+    
+    
+}
+.carousel-subtitle {
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0;
+    animation: slideUp 1.5s ease forwards;
+    animation-delay: 0.5s;
+    color: white;
+}
+
+.carousel-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    opacity: 0;
+    animation: slideUp 1.5s ease forwards;
+    animation-delay: 1s;
+    color: white;
+}
+
+.carousel-description {
+    font-size: 1rem;
+    margin: 1rem 0 2rem;
+    opacity: 0;
+    animation: slideUp 1.5s ease forwards;
+    animation-delay: 1.5s;
+    color: white;
+}
+
+.carousel-button {
+    padding: 0.8rem 2rem;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 1.5s ease;
+    opacity: 0;
+    animation: slideUp 1.5s ease forwards;
+    animation-delay: 2s;
+}
+
+.carousel-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+    z-index: 3; /* Ensure arrows are on top */
+    padding: 1rem;
+}
+.carousel-arrow:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.carousel-arrow-left {
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.carousel-arrow-right {
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1024px) {
+    .carousel-title {
+        font-size: 2.5rem;
+    }
+    .carousel-description {
+        font-size: 0.9rem;
+    }
+    .carousel-button {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-title {
+        font-size: 2rem;
+    }
+    .carousel-description {
+        font-size: 0.8rem;
+    }
+    .carousel-button {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    .carousel-arrow {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        height: 70vh;
+    }
+    .carousel-content {
+        max-width: 90%;
+    }
+    .carousel-title {
+        font-size: 1.8rem;
+    }
+    .carousel-description {
+        font-size: 0.75rem;
+    }
+    .carousel-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+    .carousel-arrow {
+        font-size: 1.3rem;
+        top: 45%;
+    }
+    .carousel-arrow-left {
+        left: 3px;
+    }
+    .carousel-arrow-right {
+        right: 3px;
+    }
+}
+/* Keyframes for slide-up animation */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

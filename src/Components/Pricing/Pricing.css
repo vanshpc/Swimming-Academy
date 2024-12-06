@@ -1,0 +1,159 @@
+.pricing-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pricing-divider {
+  margin: 0 auto 40px;
+  width: 143px;
+  height: 15px;
+  background: #0148bc; /* Add background for better visibility */
+  border-radius: 7.5px; /* Rounded effect */
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow for hover effect */
+}
+
+.pricing-card.featured {
+  border: 2px solid #0052cc;
+  transform: scale(1.05);
+}
+
+.pricing-icon-container {
+  width: 60px;
+  height: 60px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.pricing-icon {
+  font-size: 24px;
+  color: #0052cc; /* Add color for better visibility */
+}
+
+.pricing-card h2 {
+  color: #0148bc;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.price {
+  margin-bottom: 30px;
+  background: #0148BC;
+  display: block;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px; /* Small rounding for visual balance */
+}
+
+.amount {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.period {
+  color: white;
+  font-size: 14px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.features li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  color: #666;
+}
+
+.pricing-register-btn {
+  background-color: #0052cc;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-register-btn:hover {
+  background-color: #003d99;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+    border: 2px solid #0052cc;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-card {
+    padding: 20px;
+  }
+
+  .pricing-icon {
+    font-size: 20px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .amount {
+    font-size: 30px;
+  }
+
+  .period {
+    font-size: 12px;
+  }
+}

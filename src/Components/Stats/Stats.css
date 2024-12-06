@@ -1,0 +1,150 @@
+/* Stats Section */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: url('../../Assets/bg.jpg') center/cover no-repeat;
+    padding: 20px 0;
+    opacity: 0; /* Hidden initially for animation */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+    height: 180px;
+  }
+  
+  /* Keyframe for Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .stat-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Hidden initially for staggered animation */
+    transform: translateY(20px); /* Start from below */
+    animation: slideIn 0.5s ease-out forwards; /* Slide-in animation */
+    animation-delay: 0.2s; /* Delay each item slightly */
+  }
+  
+  .stat-item:nth-child(1) {
+    animation-delay: 0.2s; /* Staggered animation for each item */
+  }
+  
+  .stat-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .stat-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .stat-item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  /* Keyframe for Slide-In Animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Icon */
+  .stat-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out; /* Animation for hover */
+  }
+  
+  .stat-item:hover .stat-icon {
+    transform: scale(1.2); /* Scale up the icon on hover */
+  }
+  
+  /* Value */
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Label */
+  .stat-label {
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  /* Hover Effect for Stat Items */
+  .stat-item:hover {
+    background-color: rgba(255, 255, 255, 1); /* Brighten on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+    transform: scale(1.05); /* Slight scale up on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 1024px) {
+    .stats-section {
+      flex-direction: column;
+      height: auto; /* Allow height to adjust dynamically */
+      padding: 10px 0;
+    }
+  
+    .stat-item {
+      width: 80%; /* Increase width on smaller screens */
+      margin-bottom: 15px; /* Space out items vertically */
+      text-align: center; /* Center text and icons */
+      padding: 10px;
+    }
+  
+    .stat-icon {
+      font-size: 1.8rem; /* Smaller icons on mobile */
+      margin-right: 10px;
+    }
+  
+    .stat-value {
+      font-size: 1.3rem; /* Smaller value text */
+    }
+  
+    .stat-label {
+      font-size: 0.75rem; /* Smaller label text */
+    }
+  }
+  
+  /* Tablet responsiveness */
+  @media (max-width: 1024px) {
+    .stats-section {
+      flex-direction: column;
+      padding: 15px 0;
+    }
+  
+    .stat-item {
+      width: 90%; /* Allow more width on tablets */
+      margin-bottom: 20px;
+    }
+  
+    .stat-icon {
+      font-size: 2rem;
+      margin-right: 15px;
+    }
+  
+    .stat-value {
+      font-size: 1.4rem; /* Slightly smaller on tablet */
+    }
+  
+    .stat-label {
+      font-size: 0.8rem; /* Slightly smaller label */
+    }
+  }
+  

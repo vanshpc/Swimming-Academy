@@ -1,0 +1,67 @@
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.info-card {
+  flex: 1 1 calc(100% - 40px); /* Take full width minus gap on smaller screens */
+  max-width: 300px;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+@media (min-width: 576px) {
+  .info-card {
+      flex: 1 1 calc(50% - 40px); /* Two columns layout for mid-sized screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .info-card {
+      flex: 1 1 calc(33.33% - 40px); /* Three columns layout for larger screens */
+  }
+}
+
+.info-card .info-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .info-card .info-icon {
+      font-size: 60px;
+  }
+}
+
+.info-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .info-card h3 {
+      font-size: 18px;
+  }
+}
+
+.info-card p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+  .info-card p {
+      font-size: 14px;
+  }
+}

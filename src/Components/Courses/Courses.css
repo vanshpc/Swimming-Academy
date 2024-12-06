@@ -1,0 +1,233 @@
+.container-course,
+.cards-container-course,
+.class-card-course,
+.card-content-course,
+.image-container-course,
+.register-button-course {
+  box-sizing: border-box;
+}
+
+/* Container styles */
+.container-course {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+  padding: 1rem;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  
+}
+
+/* Header styles */
+.header-course {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.header-course h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 0.2rem;
+}
+
+.header-line-course {
+  height: 4px;
+  width: 16rem;
+  background-color: #2563eb;
+  margin: 1.4rem auto 2rem auto;
+  border-radius: 9999px;
+}
+
+/* Cards container */
+.cards-container-course {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%; /* Full width for smaller devices */
+  max-width: 1200px;
+  padding: 0 1rem; /* Add padding for smaller screens */
+}
+
+/* Card styles */
+.class-card-course {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  width: 100%; /* Make sure card takes full width in mobile */
+  max-width: 100%; /* Prevent overflow on small screens */
+}
+
+.class-card-course:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Card header, title, and content adjustments */
+.card-header-course {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card-header-course:hover {
+  background-color: #f9fafb;
+}
+
+.card-title-section-course {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-wrapper-course {
+  background-color: #dbeafe;
+  border-radius: 9999px;
+  color: #2563eb;
+  font-size: 1.25rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age-text-course {
+  color: #4b5563;
+  font-weight: bold;
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.class-title-course {
+  color: #2563eb;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.card-content-course {
+  border-top: 1px solid #f3f4f6;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.card-grid-course {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.card-details-course {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-details-course p {
+  text-align: start;
+  margin: 10px;
+}
+
+/* Register button */
+.register-button-course {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  width: 150px;
+  margin-top: 1rem;
+}
+
+.register-button-course:hover {
+  background-color: #1d4ed8;
+}
+
+.image-container-course {
+  position: relative;
+  height: 12rem;
+}
+
+.image-container-course img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small screens (Mobile) */
+@media (max-width: 480px) {
+  .header-course h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-line-course {
+    width: 10rem;
+  }
+
+  .cards-container-course {
+    padding: 0 0.5rem; /* Less padding for small screens */
+  }
+
+  .class-card-course {
+    width: 100%; /* Ensure cards fit within screen */
+    padding: 1rem;
+  }
+
+  .card-grid-course {
+    grid-template-columns: 1fr; /* Stack grid items */
+    padding: 1rem;
+  }
+
+  .register-button-course {
+    width: 100%; /* Full-width button on small screens */
+  }
+
+  .image-container-course {
+    height: 8rem; /* Reduce image size for better fit */
+  }
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 768px) {
+  .header-course h1 {
+    font-size: 2rem;
+  }
+
+  .header-line-course {
+    width: 12rem;
+  }
+
+  .cards-container-course {
+    width: 100%;
+  }
+
+  .class-card-course {
+    width: 100%;
+  }
+}
+
+/* Large screens (Desktops) */
+@media (min-width: 1024px) {
+  .cards-container-course {
+    width: 80%;
+  }
+}
